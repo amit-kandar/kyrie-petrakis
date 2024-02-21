@@ -9,7 +9,7 @@ function WhyUs() {
                 </div>
                 <div className='mt-10'>
                     <div className='w-full mb-5'>
-                        <h3 className='text-2xl text-stone-300 font-medium'><span className='pr-2'>1.</span>Features and benefits of Your LegalBuddy</h3>
+                        <h3 className='text-2xl text-stone-300 font-medium'><span className='pr-2'>1.</span>Features and benefits of our legal body</h3>
                     </div>
                     <div className='flex flex-col justify-center items-center gap-5 md:flex-row'>
                         <div className='w-full md:max-w-96 p-5 rounded-md bg-slate-700'>
@@ -48,7 +48,7 @@ function WhyUs() {
                 </div>
                 <div className='mt-10'>
                     <div className='w-full mb-5'>
-                        <h3 className='text-2xl text-stone-300 font-medium'><span className='pr-2'>2.</span>How Your LegalBuddy works</h3>
+                        <h3 className='text-2xl text-stone-300 font-medium'><span className='pr-2'>2.</span>How our legal body works</h3>
                     </div>
                     <div className='flex flex-col justify-center items-center gap-5 md:flex-row'>
                         <div className='w-full md:max-w-96 p-5 border-2 border-white rounded-lg'>
