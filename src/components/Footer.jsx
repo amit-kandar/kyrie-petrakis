@@ -16,34 +16,34 @@ function Footer() {
                 <div className='w-full'>
                     <h1 className='text-2xl text-white font-bold tracking-wider mb-3' >Services</h1>
                     <div className='w-full flex flex-col gap-2'>
-                        <Link to="/" className='text-base tracking-normal text-neutral-100 opacity-75'>Income Tax</Link>
-                        <Link to="/" className='text-base tracking-normal text-neutral-100 opacity-75'>GST</Link>
-                        <Link to="/" className='text-base tracking-normal text-neutral-100 opacity-75'>Criminal</Link>
-                        <Link to="/" className='text-base tracking-normal text-neutral-100 opacity-75'>Civil</Link>
-                        <Link to="/" className='text-base tracking-normal text-neutral-100 opacity-75'>Others</Link>
+                        <Link to="/" className='w-fit text-base tracking-normal text-neutral-100 opacity-75 hover:scale-125 duration-300'>Income Tax</Link>
+                        <Link to="/" className='w-fit text-base tracking-normal text-neutral-100 opacity-75 hover:scale-125 duration-300'>GST</Link>
+                        <Link to="/" className='w-fit text-base tracking-normal text-neutral-100 opacity-75 hover:scale-125 duration-300'>Criminal</Link>
+                        <Link to="/" className='w-fit text-base tracking-normal text-neutral-100 opacity-75 hover:scale-125 duration-300'>Civil</Link>
+                        <Link to="/" className='w-fit text-base tracking-normal text-neutral-100 opacity-75 hover:scale-125 duration-300'>Others</Link>
                     </div>
                 </div>
                 <div className='w-full'>
                     <h1 className='text-2xl text-white font-bold tracking-wider mb-3' >Page</h1>
                     <div className='w-full flex flex-col gap-2'>
-                        <Link to="/about-us" className='text-base tracking-normal text-neutral-100 opacity-75'>About Us</Link>
-                        <Link to="/services" className='text-base tracking-normal text-neutral-100 opacity-75'>Services</Link>
-                        <Link to="/testimonials" className='text-base tracking-normal text-neutral-100 opacity-75'>Testimonials</Link>
-                        <Link to="/contact-us" className='text-base tracking-normal text-neutral-100 opacity-75'>Contact Us</Link>
+                        <Link to="/about-us" className='w-fit text-base tracking-normal text-neutral-100 opacity-75'>About Us</Link>
+                        <Link to="/services" className='w-fit text-base tracking-normal text-neutral-100 opacity-75'>Services</Link>
+                        <Link to="/testimonials" className='w-fit text-base tracking-normal text-neutral-100 opacity-75'>Testimonials</Link>
+                        <Link to="/contact-us" className='w-fit text-base tracking-normal text-neutral-100 opacity-75'>Contact Us</Link>
                     </div>
                 </div>
                 <div className='w-full'>
                     <h1 className='text-2xl text-white font-bold tracking-wider mb-3' >Contact Us</h1>
                     <div className='w-full flex flex-col gap-2'>
-                        <span className='flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75'>
+                        <span className='w-fit flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75'>
                             <i className='bx bx-phone-call text-xl text-white'></i>
                             <span>(123) 456-7890</span>
                         </span>
-                        <span className='flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75'>
+                        <span className='w-fit flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75'>
                             <i className='bx bx-map text-xl text-white'></i>
                             <span>123 Main St, Cityville, 12345, Fictionland.</span>
                         </span>
-                        <span className='flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75'>
+                        <span className='w-fit flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75'>
                             <i className='bx bx-envelope text-xl text-white'></i>
                             <span>info@domain.com</span>
                         </span>
@@ -52,22 +52,22 @@ function Footer() {
                 <div className='w-full'>
                     <h1 className='text-2xl text-white font-bold tracking-wider mb-3' >Social Media</h1>
                     <div className='w-full flex flex-col gap-2'>
-                        <span className='flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75'>
+                        <Link to="/" className='w-fit flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75 cursor-pointer'>
                             <i className='bx bxl-instagram text-xl text-white'></i>
                             <span>{COMPANY_NAME}</span>
-                        </span>
-                        <span className='flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75'>
+                        </Link>
+                        <Link to="/" className='w-fit flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75 cursor-pointer'>
                             <i className='bx bxl-facebook-circle text-xl text-white' ></i>
                             <span>{COMPANY_NAME}</span>
-                        </span>
-                        <span className='flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75'>
+                        </Link>
+                        <Link to="/" className='w-fit flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75 cursor-pointer'>
                             <i className='bx bxl-twitter text-xl text-white' ></i>
                             <span>{COMPANY_NAME}</span>
-                        </span>
-                        <span className='flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75'>
+                        </Link>
+                        <Link to="/" className='w-fit flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75 cursor-pointer'>
                             <i className='bx bxl-linkedin text-xl text-white' ></i>
                             <span>{COMPANY_NAME}</span>
-                        </span>
+                        </Link>
                     </div>
                 </div>
             </div>
