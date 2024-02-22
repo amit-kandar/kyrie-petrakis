@@ -3,7 +3,7 @@ import { HERO_BG_IMG } from '../config/constant'
 
 function Hero() {
     return (
-        <section className='relative min-h-screen flex'>
+        <section className='relative min-h-screen flex px-5 md:px-10'>
             <div
                 className="absolute inset-0 w-full h-full bg-cover bg-center"
                 style={{ backgroundImage: `url(${HERO_BG_IMG})` }}
@@ -23,7 +23,7 @@ function Hero() {
                     guidance.
                 </p>
                 <div className='w-full self-start mt-10 bg-transparent cursor-pointer '>
-                    <button className='px-10 py-3 rounded-full lg:text-xl text-white border-2 border-stone-200'>Consult Now</button>
+                    <button className='px-10 py-3 rounded-full lg:text-xl text-white border-2 border-stone-200 hover:scale-125 duration-200 hover:bg-slate-900'>Consult Now</button>
                 </div>
             </div>
 
