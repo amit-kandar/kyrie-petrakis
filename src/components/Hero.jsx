@@ -3,7 +3,7 @@ import { HERO_BG_IMG } from '../config/constant'
 
 function Hero() {
     return (
-        <section className='relative min-h-screen flex px-5 md:px-10'>
+        <section className='relative min-h-screen flex p-5 md:p-10'>
             <div
                 className="absolute inset-0 w-full h-full bg-cover bg-center"
                 style={{ backgroundImage: `url(${HERO_BG_IMG})` }}
