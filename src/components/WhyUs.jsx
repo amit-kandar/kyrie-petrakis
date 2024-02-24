@@ -1,89 +1,64 @@
-import React from 'react'
+import React from 'react';
+import { WHYUS_BG } from '../config/constant';
 
 function WhyUs() {
     return (
-        <section className='bg-slate-500 w-full flex flex-col items-center px-5 py-10'>
-            <div className='w-fit '>
-                <div>
-                    <h1 className='text-5xl font-semibold text-white'>Why work with us</h1>
+        <section className='bg-gray-600 w-full flex flex-col items-center px-5 py-10'>
+            <div className='w-full flex flex-col items-center justify-center'>
+                <div className='w-full flex flex-col items-center justify-center gap-2 mb-5'>
+                    <h1 className='text-2xl text-white font-semibold'>Why choose us?</h1>
+                    <span className='text-sm text-gray-300 opacity-70 text-center'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, eos!</span>
                 </div>
-                <div className='mt-10'>
-                    <div className='w-full mb-5'>
-                        <h3 className='text-2xl text-stone-300 font-medium'><span className='pr-2'>1.</span>Features and benefits of our legal body</h3>
+                <div className='w-full flex flex-col gap-5 lg:flex-row'>
+                    <div className='w-full h-56 md:h-72 mb-5'>
+                        <img src={WHYUS_BG} alt="why us background" className='w-full h-full bg-cover bg-center' />
                     </div>
-                    <div className='flex flex-col justify-center items-center gap-5 md:flex-row'>
-                        <div className='w-full md:max-w-96 p-5 rounded-md bg-slate-700'>
-                            <div className='mb-3'>
-                                <h4 className='text-xl text-white'>Comprehensive Services</h4>
+                    <div className='w-full flex flex-col md:flex-row lg:flex-col gap-5'>
+                        <div className='w-full flex flex-row gap-5'>
+                            <div className='h-full flex justify-start items-start'>
+                                <div className='w-20 h-20 rounded-ss-3xl rounded-ee-3xl flex justify-center items-center bg-gray-900'>
+                                    <span className='text-xl font-semibold text-white'>1</span>
+                                </div>
                             </div>
-                            <p className='text-gray-400 text-sm'>
-                                Access a wide range of legal
-                                services, from contract reviews
-                                to trademark filings.
-
-                            </p>
+                            <div className='w-full flex flex-col justify-center-center gap-3'>
+                                <h1 className='text-xl text-white font-bold'>Comprehensive Services</h1>
+                                <p className='text-sm text-gray-200 font-medium opacity-60 tracking-wide'>
+                                    Access a wide range of legal
+                                    services, from contract reviews
+                                    to trademark filings.
+                                </p>
+                            </div>
                         </div>
-                        <div className='w-full md:max-w-96 p-5 rounded-md bg-slate-700'>
-                            <div className='mb-3'>
-                                <h4 className='text-xl text-white'>Cost-Effective Solutions</h4>
+                        <div className='w-full flex flex-row gap-5'>
+                            <div className='h-full flex justify-start items-start'>
+                                <div className='w-20 h-20 rounded-ss-3xl rounded-ee-3xl flex justify-center items-center bg-gray-900'>
+                                    <span className='text-xl font-semibold text-white'>2</span>
+                                </div>
                             </div>
-                            <p className='text-gray-400 text-sm'>
-                                Save money with transparent
-                                pricing and subscription plans
-                                tailored to your needs.
-                            </p>
+                            <div className='w-full flex flex-col justify-center-center gap-3'>
+                                <h1 className='text-xl text-white font-bold'>Cost-Effective Solutions</h1>
+                                <p className='text-sm text-gray-200 font-medium opacity-60 tracking-wide'>
+                                    Save money with transparent
+                                    pricing and subscription plans
+                                    tailored to your needs.
+                                </p>
+                            </div>
                         </div>
-                        <div className='w-full md:max-w-96 p-5 rounded-md bg-slate-700'>
-                            <div className='mb-3'>
-                                <h4 className='text-xl text-white'>Expert Guidance</h4>
+                        <div className='w-full flex flex-row gap-5'>
+                            <div className='h-full flex justify-start items-start'>
+                                <div className='w-20 h-20 rounded-ss-3xl rounded-ee-3xl flex justify-center items-center bg-gray-900'>
+                                    <span className='text-xl font-semibold text-white'>3</span>
+                                </div>
                             </div>
-                            <p className='text-gray-400 text-sm'>
-                                Receive professional advice
-                                from legal experts with
-                                extensive experience in various
-                                domains.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div className='mt-10'>
-                    <div className='w-full mb-5'>
-                        <h3 className='text-2xl text-stone-300 font-medium'><span className='pr-2'>2.</span>How our legal body works</h3>
-                    </div>
-                    <div className='flex flex-col justify-center items-center gap-5 md:flex-row'>
-                        <div className='w-full md:max-w-96 p-5 border-2 border-white rounded-lg'>
-                            <div className='mb-3'>
-                                <h4 className='text-xl text-white'><span className='pr-3'>1.</span>Legal Consultation</h4>
+                            <div className='w-full flex flex-col justify-center-center gap-3'>
+                                <h1 className='text-xl text-white font-bold'>Expert Guidance</h1>
+                                <p className='text-sm text-gray-200 font-medium opacity-60 tracking-wide'>
+                                    Receive professional advice
+                                    from legal experts with
+                                    extensive experience in various
+                                    domains.
+                                </p>
                             </div>
-                            <p className='text-gray-300 text-sm'>
-                                Connect with experienced
-                                lawyers for expert advice
-                                and guidance regarding
-                                your legal needs.
-                            </p>
-                        </div>
-                        <div className='w-full md:max-w-96 p-5 border-2 border-white rounded-lg'>
-                            <div className='mb-3'>
-                                <h4 className='text-xl text-white'><span className='pr-3'>2.</span>Document Preparation</h4>
-                            </div>
-                            <p className='text-gray-300 text-sm'>
-                                Efficiently draft and
-                                customize legal
-                                documents with the
-                                assistance of our
-                                knowledgeable team.
-                            </p>
-                        </div>
-                        <div className='w-full md:max-w-96 p-5 border-2 border-white rounded-lg'>
-                            <div className='mb-3'>
-                                <h4 className='text-xl text-white'><span className='pr-3'>3.</span>Case Management</h4>
-                            </div>
-                            <p className='text-gray-300 text-sm'>
-                                Keep track of your cases,
-                                appointments, and
-                                important documents
-                                within our secure platform.
-                            </p>
                         </div>
                     </div>
                 </div>
