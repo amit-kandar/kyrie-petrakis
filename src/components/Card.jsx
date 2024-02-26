@@ -17,7 +17,7 @@ function Card({ image_src, title, services, link_to }) {
                     </ul>
                 </div>
                 <div className='w-full flex justify-center mt-8'>
-                    <Link to={`/services/${link_to}`} className='flex items-center font-medium cursor-pointer text-white hover:text-blue-500 hover:scale-110 hover:duration-200'>
+                    <Link to={`/services${link_to}`} className='flex items-center font-medium cursor-pointer text-white hover:text-blue-500 hover:scale-110 hover:duration-200'>
                         <span className='mb-1'>Know More</span>
                         <i className='bx bx-right-arrow-alt text-2xl' ></i>
                     </Link>
