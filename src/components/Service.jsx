@@ -14,8 +14,9 @@ function Service() {
     <section className="w-full flex justify-center flex-col">
       <div className="w-full flex items-center flex-col py-12 lg:py-16 xl:py-24 bg-slate-700">
         <div className="container px-4 md:px-6">
-          <div className="w-full flex justify-center mb-10 lg:mb-14">
+          <div className="w-full flex flex-col gap-6 items-center mb-10 lg:px-40 lg:mb-14">
             <h1 className="text-3xl font-bold tracking-widest sm:text-5xl lg:text-7xl text-gray-100">{selectedService.title}</h1>
+            <p className="text-sm text-center opacity-60 text-gray-100">{selectedService.description}</p>
           </div>
           <div className="grid items-start lg:grid-cols-2 gap-6 lg:gap-6 xl:gap-1">
             <img
