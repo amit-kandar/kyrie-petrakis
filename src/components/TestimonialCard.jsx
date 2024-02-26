@@ -14,26 +14,26 @@ function TestimonialCard({ name, img_url, rating, address, message }) {
     };
     return (
         <div className='w-full h-auto px-3 flex justify-center items-center'>
-            <div className='max-w-96 min-h-56 bg-gray-200 rounded-lg p-3'>
+            <div className='max-w-96 min-h-56 bg-gray-800 rounded-lg p-3'>
                 <div className='w-full flex flex-row items-center gap-3'>
                     <div className='w-20 h-16'>
                         <img src={img_url} alt="user" className='w-full h-full rounded-full' />
                     </div>
                     <div className='w-full h-14'>
                         <div className='w-full flex flex-row justify-between items-center'>
-                            <h3 className='text-lg font-semibold text-black '>{name}</h3>
+                            <h3 className='text-lg font-semibold text-white '>{name}</h3>
                             <div className="flex items-center">
                                 {renderStars(filledStars, "w-4 h-4 text-yellow-300 ms-1")}
                                 {renderStars(emptyStars, "w-4 h-4 ms-1 text-gray-300 dark:text-gray-500")}
                             </div>
                         </div>
                         <div>
-                            <p className='text-xs w-full'>{address}</p>
+                            <p className='text-xs w-full text-white'>{address}</p>
                         </div>
                     </div>
                 </div>
                 <div className='p-5'>
-                    <p className='text-base font-serif font-light'><span className='text-4xl'>"</span>{message}</p>
+                    <p className='text-base font-serif font-light text-white'><span className='text-4xl'>"</span>{message}</p>
                 </div>
             </div>
         </div>
