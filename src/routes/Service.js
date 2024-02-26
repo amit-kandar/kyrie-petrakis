@@ -57,7 +57,7 @@ function Service() {
                         link_to="/civil-law"
                     />
                     <Card
-                        title="Others Legal Services"
+                        title="Others"
                         image_src={OTHHERS_ICO}
                         services={[
                             "Patent and Trade Mark",
