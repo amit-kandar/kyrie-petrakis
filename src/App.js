@@ -8,7 +8,7 @@ import Navbar from './components/Navbar';
 import Home from "./routes/Home";
 import AboutUs from './routes/AboutUs';
 import ContactUs from './routes/ContactUs';
-import Services from './routes/Services';
+import Services from './routes/Service';
 import Testimonials from './routes/Testimonials';
 import Footer from "./components/Footer";
 import Service from './components/Service';
