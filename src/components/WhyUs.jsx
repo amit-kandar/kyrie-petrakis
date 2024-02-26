@@ -10,10 +10,10 @@ function WhyUs() {
                     <span className='text-sm text-gray-300 opacity-70 text-center'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, eos!</span>
                 </div>
                 <div className='w-full flex flex-col gap-5 lg:flex-row'>
-                    <div className='w-full h-56 md:h-72 mb-5'>
+                    <div className='w-full h-64 sm:h-72 md:h-80 xl:h-96 mb-5'>
                         <img src={WHYUS_BG} alt="why us background" className='w-full h-full bg-cover bg-center' />
                     </div>
-                    <div className='w-full flex flex-col md:flex-row lg:flex-col gap-5'>
+                    <div className='w-full flex flex-col gap-5 md:flex-row lg:flex-col lg:justify-start lg:gap-6 xl:gap-[72px]'>
                         <div className='w-full flex flex-row gap-5'>
                             <div className='h-full flex justify-start items-start'>
                                 <div className='w-20 h-20 rounded-ss-3xl rounded-ee-3xl flex justify-center items-center bg-gray-900'>
