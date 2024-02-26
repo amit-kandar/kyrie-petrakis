@@ -29,7 +29,8 @@ export default function Navbar() {
                 <>
                     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                         <div className="relative flex h-20 items-center justify-between">
-                            <div className="flex items-center justify-center sm:items-stretch sm:justify-start">
+                            <div className="w-full flex items-center justify-bet
+                             sm:items-stretch sm:justify-between ">
                                 <Link to='/' className="flex flex-shrink-0 items-center">
                                     <img
                                         className="h-10 w-10 rounded-full"
