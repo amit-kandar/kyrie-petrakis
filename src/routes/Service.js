@@ -36,17 +36,17 @@ function Service() {
                         link_to="/gst"
                     />
                     <Card
-                        title="Criminal"
+                        title="Criminal Law"
                         image_src={CRIMINAL_ICO}
                         services={[
                             "Bail Petition",
                             "NI Act Cases",
                             "Others",
                         ]}
-                        link_to="/criminal"
+                        link_to="/criminal-law"
                     />
                     <Card
-                        title="Civil"
+                        title="Civil Law"
                         image_src={CIVIL_ICO}
                         services={[
                             "Property Registration",
@@ -54,10 +54,10 @@ function Service() {
                             "Accounting",
                             "Financial Statements"
                         ]}
-                        link_to="/civil"
+                        link_to="/civil-law"
                     />
                     <Card
-                        title="Others"
+                        title="Others Legal Services"
                         image_src={OTHHERS_ICO}
                         services={[
                             "Patent and Trade Mark",
@@ -66,7 +66,7 @@ function Service() {
                             "Power of Attorney",
                             "etc"
                         ]}
-                        link_to="/others"
+                        link_to="/others-legal-services"
                     />
 
                 </div>
