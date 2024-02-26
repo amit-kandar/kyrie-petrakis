@@ -4,7 +4,7 @@ import Card from '../components/Card';
 
 function Service() {
     return (
-        <section className='w-full py-12 px-6 bg-gray-700'>
+        <section className='w-full flex justify-center py-12 px-6 bg-gray-700'>
             <div className='container'>
                 <div className='w-full flex flex-col items-center gap-3 lg:gap-6'>
                     <h1 className='text-3xl font-medium tracking-wider text-white md:text-4xl lg:text-6xl'>Services</h1>
@@ -12,7 +12,7 @@ function Service() {
                         Efficient and reliable services tailored to your needs. Expert solutions, seamless communication, and superior results. Choose excellence for success.
                     </p>
                 </div>
-                <div className='w-full grid grid-cols-1 place-items-center sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 my-8'>
+                <div className='w-full md:px-16 lg:px-8 xl:px-44 grid grid-cols-1 place-items-center sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8'>
                     <Card
                         title="Income Tax"
                         image_src={INCOME_TAX_ICO}
