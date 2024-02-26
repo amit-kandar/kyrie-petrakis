@@ -11,6 +11,7 @@ import ContactUs from './routes/ContactUs';
 import Services from './routes/Services';
 import Testimonials from './routes/Testimonials';
 import Footer from "./components/Footer";
+import Service from './components/Service';
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -41,6 +42,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/services" element={<Services />} />
+        <Route path='/services/:serviceName' element={<Service />} />
         <Route path="/testimonials" element={<Testimonials />} />
       </Routes>
       <Footer />
