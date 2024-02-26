@@ -30,11 +30,11 @@ function Footer() {
                 <div className='w-fit'>
                     <h1 className='text-2xl text-white font-bold tracking-wider mb-3' >Services</h1>
                     <div className='w-full flex flex-col gap-2'>
-                        <Link to="/" className='w-fit text-base tracking-normal text-neutral-100 opacity-75 hover:scale-125 duration-300'>Income Tax</Link>
-                        <Link to="/" className='w-fit text-base tracking-normal text-neutral-100 opacity-75 hover:scale-125 duration-300'>GST</Link>
-                        <Link to="/" className='w-fit text-base tracking-normal text-neutral-100 opacity-75 hover:scale-125 duration-300'>Criminal</Link>
-                        <Link to="/" className='w-fit text-base tracking-normal text-neutral-100 opacity-75 hover:scale-125 duration-300'>Civil</Link>
-                        <Link to="/" className='w-fit text-base tracking-normal text-neutral-100 opacity-75 hover:scale-125 duration-300'>Others</Link>
+                        <Link to="/services/income-tax" className='w-fit text-base tracking-normal text-neutral-100 opacity-75 hover:scale-125 duration-300'>Income Tax</Link>
+                        <Link to="/services/gst" className='w-fit text-base tracking-normal text-neutral-100 opacity-75 hover:scale-125 duration-300'>GST</Link>
+                        <Link to="/services/criminal-law" className='w-fit text-base tracking-normal text-neutral-100 opacity-75 hover:scale-125 duration-300'>Criminal</Link>
+                        <Link to="/services/civil-law" className='w-fit text-base tracking-normal text-neutral-100 opacity-75 hover:scale-125 duration-300'>Civil</Link>
+                        <Link to="/services/other-legal-services" className='w-fit text-base tracking-normal text-neutral-100 opacity-75 hover:scale-125 duration-300'>Others</Link>
                     </div>
                 </div>
                 <div className='w-fit'>
