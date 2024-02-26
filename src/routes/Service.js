@@ -1,5 +1,5 @@
 import React from 'react';
-import { INCOME_TAX_ICO, GST_ICO, CRIMINAL_ICO, CIVIL_ICO, OTHHERS_ICO, GST } from '../config/constant';
+import { INCOME_TAX_ICO, GST_ICO, CRIMINAL_ICO, CIVIL_ICO, OTHHERS_ICO } from '../config/constant';
 import Card from '../components/Card';
 
 function Service() {
