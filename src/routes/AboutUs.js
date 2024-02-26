@@ -1,5 +1,6 @@
 import React from 'react';
 import { ABOUT_BG } from '../config/constant';
+import { Link } from 'react-router-dom';
 
 function AboutUs() {
     return (
@@ -22,7 +23,7 @@ function AboutUs() {
                             </p>
                         </div>
                         <div className='w-full flex justify-center md:justify-start'>
-                            <button className='px-8 py-3 text-white border border-gray-200 rounded-md cursor-pointer duration-200 hover:bg-gray-500 hover:scale-110'>Learn More</button>
+                            <Link to="/about-us" className='px-8 py-3 text-white border border-gray-200 rounded-md cursor-pointer duration-200 hover:bg-gray-500 hover:scale-110'>Learn More</Link>
                         </div>
                     </div>
                 </div>
