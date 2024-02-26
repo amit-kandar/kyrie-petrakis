@@ -37,7 +37,7 @@ function ContactUs() {
                             </div>
                             <div className='p-3'>
                                 <div className='flex flex-row items-center gap-3'>
-                                    <i class='bx bx-phone-call'></i>
+                                    <i className='bx bx-phone-call'></i>
                                     <span className='text-lg'>(123) 456-7890</span>
                                 </div>
                                 <div className='flex flex-row items-center gap-3'>
