@@ -10,7 +10,7 @@ function Hero() {
             >
                 <div className="absolute inset-0 bg-black opacity-50"></div>
             </div>
-            <div className='h-full z-10 flex flex-col justify-center items-center px-5 mt-36'>
+            <div className='h-full z-10 flex flex-col justify-center items-center px-3 sm:px-5 mt-36'>
                 <div className='w-full text-white text-left' >
                     <h2 className='text-4xl font-semibold md:text-4xl lg:text-6xl'>
                         Your LegalBuddy
