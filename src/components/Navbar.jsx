@@ -4,23 +4,9 @@ import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { LOGO1 } from '../config/constant';
 
-const navigation = [
-    { name: 'Home', href: '/', current: true },
-    { name: 'About Us', href: '/about-us', current: false },
-    { name: 'Services', href: '/services', current: false },
-]
-
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
-
 export default function Navbar() {
     const location = useLocation();
 
-    const updatedNavigation = navigation.map((item) => ({
-        ...item,
-        current: item.href === location.pathname,
-    }));
     return (
         <Disclosure as="nav" className="bg-gray-800">
             {({ open }) => (
@@ -38,21 +24,71 @@ export default function Navbar() {
                                 </Link>
                                 <div className="hidden sm:ml-6 sm:block">
                                     <div className="flex items-center space-x-4">
-                                        {updatedNavigation.map((item) => (
-                                            <Link
-                                                key={item.name}
-                                                to={item.href}
-                                                className={classNames(
-                                                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                                    'rounded-md px-3 py-2 text-sm font-medium'
-                                                )}
-                                                aria-current={item.current ? 'page' : undefined}
-                                            >
-                                                {item.name}
-                                            </Link>
-                                        ))}
+                                        <Link
+                                            to="/"
+                                            className={`flex items-center rounded-md px-3 py-2 text-sm font-medium ${location.pathname === '/' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}`}
+                                        >
+                                            Home
+                                        </Link>
+                                        <Link
+                                            to="/about-us"
+                                            className={`flex items-center rounded-md px-3 py-2 text-sm font-medium ${location.pathname === '/about-us' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}`}
+                                        >
+                                            About Us
+                                        </Link>
+                                        <div
+                                            className={`relative curpo group flex items-center rounded-md px-3 py-1 text-sm font-medium ${location.pathname === '/services' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}`}
+                                        >
+                                            <Link to="/services">Services</Link>
+                                            <i className='bx bx-chevron-down text-2xl pl-1 group-hover:hidden block'></i>
+                                            <i className='bx bx-chevron-up text-2xl pl-1 hidden group-hover:block'></i>
+
+                                            <ul className="hidden group-hover:block absolute z-50 bg-gray-600 inset-0 translate-y-10 rounded w-36 h-48 py-4 px-3 shadow-2xl">
+
+                                                <li className='w-full text-base duration-200 hover:bg-gray-500 text-gray-200 hover:text-gray-100 px-3 py-1 rounded'>
+                                                    <Link
+                                                        to="/services/income-tax"
+                                                        aria-current={location.pathname === '/services/income-tax' ? 'page' : undefined}
+                                                    >
+                                                        Income Tax
+                                                    </Link>
+                                                </li>
+                                                <li className='w-full text-base duration-200 hover:bg-gray-500 text-gray-200 hover:text-gray-100 px-3 py-1 rounded'>
+                                                    <Link
+                                                        to="/services/gst"
+                                                        aria-current={location.pathname === '/services/gst' ? 'page' : undefined}
+                                                    >
+                                                        GST
+                                                    </Link>
+                                                </li>
+                                                <li className='w-full text-base duration-200 hover:bg-gray-500 text-gray-200 hover:text-gray-100 px-3 py-1 rounded'>
+                                                    <Link
+                                                        to="/services/criminal-law"
+                                                        aria-current={location.pathname === '/services/criminal-law' ? 'page' : undefined}
+                                                    >
+                                                        Criminal Law
+                                                    </Link>
+                                                </li>
+                                                <li className='w-full text-base duration-200 hover:bg-gray-500 text-gray-200 hover:text-gray-100 px-3 py-1 rounded'>
+                                                    <Link
+                                                        to="/services/civil-law"
+                                                        aria-current={location.pathname === '/services/civil-law' ? 'page' : undefined}
+                                                    >
+                                                        Civil Law
+                                                    </Link>
+                                                </li>
+                                                <li className='w-full text-base duration-200 hover:bg-gray-500 text-gray-200 hover:text-gray-100 px-3 py-1 rounded'>
+                                                    <Link
+                                                        to="/services/others-legal-services"
+                                                        aria-current={location.pathname === '/services/others-legal-services' ? 'page' : undefined}
+                                                    >
+                                                        Others
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </div>
                                         <div className='bg-green-900 rounded-full w-fit py-3 cursor-pointer duration-200 hover:scale-110 px-5'>
-                                            <Link to="/contact-us" className='text-white'>Get started</Link>
+                                            <Link to="/contact-us" className='text-white' >Get started</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -73,20 +109,32 @@ export default function Navbar() {
 
                     <Disclosure.Panel className="sm:hidden">
                         <div className="space-y-1 px-2 pb-3 pt-2">
-                            {updatedNavigation.map((item) => (
-                                <Disclosure.Button
-                                    key={item.name}
-                                    as="a"
-                                    href={item.href}
-                                    className={classNames(
-                                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                        'block rounded-md px-3 py-2 text-base font-medium'
-                                    )}
-                                    aria-current={item.current ? 'page' : undefined}
-                                >
-                                    {item.name}
-                                </Disclosure.Button>
-                            ))}
+                            <Disclosure.Button
+                                as="a"
+                                href="/"
+                                className={`flex items-center rounded-md px-3 py-2 text-sm font-medium ${location.pathname === '/' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}`}
+                            >
+                                Home
+                            </Disclosure.Button>
+                            <Disclosure.Button
+                                as="a"
+                                href="/about-us"
+                                className={`flex items-center rounded-md px-3 py-2 text-sm font-medium ${location.pathname === '/about-us' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}`}
+                            >
+                                About Us
+                            </Disclosure.Button>
+                            <Disclosure.Button
+                                as="a"
+                                href="/services"
+                                className={`flex items-center rounded-md px-3 py-2 text-sm font-medium ${location.pathname === '/services' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}`}
+                            >
+                                Services
+                            </Disclosure.Button>
+                            <Disclosure.Button >
+                                <div className='bg-green-900 rounded-full w-fit py-3 cursor-pointer duration-200 hover:scale-110 px-5'>
+                                    <Link to="/contact-us" className='text-white' >Get started</Link>
+                                </div>
+                            </Disclosure.Button>
                         </div>
                     </Disclosure.Panel>
                 </>
