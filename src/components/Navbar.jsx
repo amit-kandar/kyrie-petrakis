@@ -8,7 +8,6 @@ const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'About Us', href: '/about-us', current: false },
     { name: 'Services', href: '/services', current: false },
-    { name: 'Contact Us', href: '/contact-us', current: false },
 ]
 
 function classNames(...classes) {
@@ -38,7 +37,7 @@ export default function Navbar() {
                                     />
                                 </Link>
                                 <div className="hidden sm:ml-6 sm:block">
-                                    <div className="flex space-x-4">
+                                    <div className="flex items-center space-x-4">
                                         {updatedNavigation.map((item) => (
                                             <Link
                                                 key={item.name}
@@ -52,6 +51,9 @@ export default function Navbar() {
                                                 {item.name}
                                             </Link>
                                         ))}
+                                        <div className='bg-green-900 rounded-full w-fit py-3 cursor-pointer duration-200 hover:scale-110 px-5'>
+                                            <Link to="/contact-us" className='text-white'>Get started</Link>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
