@@ -55,7 +55,7 @@ export const services = [
         image: CRIMINAL
     },
     {
-        title: "Other Legal Services",
+        title: "Others Legal Services",
         summary: "Assistance in various legal matters.",
         description: "Get comprehensive assistance in various legal matters with our diverse services. We offer legal research and opinion, alternative dispute resolution, notary services, and document review.",
         points: [
