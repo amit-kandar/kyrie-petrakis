@@ -106,7 +106,7 @@ function ContactUs() {
                     <div className='w-full mt-10'>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5209.974580116529!2d88.40267528884736!3d22.578790820802357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027677c1c8a03b%3A0xe1bc02832a8f64a4!2sMani%20Square!5e0!3m2!1sen!2sin!4v1708165745892!5m2!1sen!2sin" className='w-full h-[300px] sm:h-90 md:h-96 rounded-md' allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title='map' color='dark' ></iframe>
                     </div>
-                    <div className='w-full flex flex-wrap justify-around gap-2'>
+                    <div className='w-full flex flex-wrap justify-around gap-2 md:mt-12'>
                         <div className='p-3 flex items-center flex-col gap-4'>
                             <div className='w-16 h-16 flex justify-center items-center rounded-full border-2 border-gray-100'>
                                 <img src={LOCATION} alt="location" className='w-6 h-6' />
