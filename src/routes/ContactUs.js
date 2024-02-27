@@ -4,8 +4,6 @@ import USER from '../assets/user.svg';
 import { TESTIMONIALS_BG_IMG } from '../config/constant'
 
 function ContactUs() {
-    // const [selectedService, setSelectedService] = useState('');
-    // const [isOpen, setIsOpen] = useState(false)
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -27,26 +25,10 @@ function ContactUs() {
         console.log('Form submitted:', formData);
     };
 
-    // const services = [
-    //     'Income Tax',
-    //     'GST',
-    //     'Civil Law',
-    //     'Criminal Law',
-    //     'Other Legal Services'
-    // ];
-
-    // const handleServiceChange = (event) => {
-    //     setSelectedService(event.target.value);
-    // };
-
-    // const handleDropdown = () => {
-    //     setIsOpen(prev => !prev);
-    // }
-
     const backgroundStyle = {
         backgroundImage: `url(${TESTIMONIALS_BG_IMG})`,
         backgroundRepeat: "no-repeat",
-        backgroundPosition: 'center',
+        backgroundPosition: 'center bottom  ',
     };
 
     return (
@@ -70,20 +52,6 @@ function ContactUs() {
                                 </label>
                                 <input id="email" placeholder="Enter your email" type="email" className="bg-transparent border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-gray-100 focus:border-zinc-200 duration-200" onCanPlay={handleChange} />
                             </div>
-                            {/* <div className="relative grid gap-1.5 w-full" onClick={handleDropdown}>
-                                <label className="block text-sm font-medium text-gray-100" htmlFor="service">Service:</label>
-                                <div className="bg-transparent border-2 border-zinc-500 rounded-md py-2 px-5 outline-none text-gray-300 focus:border-zinc-200 duration-200">
-                                    <div className='flex justify-between items-center'>
-                                        <span>Select Service</span>
-                                        {
-                                            isOpen ? <i className='bx bx-chevron-up text-3xl'></i> : <i className='bx bx-chevron-down text-3xl'></i>
-                                        }
-                                    </div>
-                                    <div className={` ${isOpen ? "block" : "hidden"} absolute w-full h-20 bg-current inset-0 translate-y-[84px] rounded-md`}>
-
-                                    </div>
-                                </div>
-                            </div> */}
                             <div className="grid gap-1.5 w-full">
                                 <label className="block text-sm font-medium text-gray-100" htmlFor="subject">
                                     Subject
