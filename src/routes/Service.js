@@ -1,10 +1,15 @@
 import React from 'react';
-import { INCOME_TAX_ICO, GST_ICO, CRIMINAL_ICO, CIVIL_ICO, OTHHERS_ICO } from '../config/constant';
+import { INCOME_TAX_ICO, GST_ICO, CRIMINAL_ICO, CIVIL_ICO, OTHHERS_ICO, TESTIMONIALS_BG_IMG } from '../config/constant';
 import Card from '../components/Card';
 
 function Service() {
+    const backgroundStyle = {
+        backgroundImage: `url(${TESTIMONIALS_BG_IMG})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: 'center',
+    };
     return (
-        <section className='w-full flex justify-center py-12 px-6 bg-gray-700'>
+        <section className='w-full flex justify-center py-12 px-6 bg-gray-700' style={backgroundStyle}>
             <div className='container'>
                 <div className='w-full flex flex-col items-center gap-3 lg:gap-6'>
                     <h1 className='text-3xl font-medium tracking-wider text-white md:text-4xl lg:text-6xl'>Services</h1>

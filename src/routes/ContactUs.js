@@ -43,10 +43,14 @@ function ContactUs() {
     //     setIsOpen(prev => !prev);
     // }
 
-
+    const backgroundStyle = {
+        backgroundImage: `url(${TESTIMONIALS_BG_IMG})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: 'center',
+    };
 
     return (
-        <section className="w-full py-10 px-5 lg:px-12 xl:px-16 bg-gray-700">
+        <section className="w-full py-10 px-5 lg:px-12 xl:px-16 bg-gray-700" style={backgroundStyle}>
             <div className='flex flex-col justify-around gap-5 md:gap-x-8 md:flex-row'>
                 <div className="w-full max-w-[600px] flex-1 mx-auto mt-8 p-6 bg-gray-800 rounded-md shadow-lg">
                     <div className='w-full flex justify-center md:justify-start'>
