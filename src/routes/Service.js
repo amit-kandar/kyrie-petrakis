@@ -68,6 +68,18 @@ function Service() {
                         ]}
                         link_to="/others-legal-services"
                     />
+                    <Card
+                        title="Others"
+                        image_src={OTHHERS_ICO}
+                        services={[
+                            "Patent and Trade Mark",
+                            "Incorporation of Private Limited",
+                            "Deeds and Agreements",
+                            "Power of Attorney",
+                            "etc"
+                        ]}
+                        link_to="/others-legal-services"
+                    />
 
                 </div>
             </div>
