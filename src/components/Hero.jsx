@@ -1,5 +1,6 @@
 import React from 'react';
 import { COMPANY_NAME, HERO_BG_IMG } from '../config/constant'
+import { Link } from 'react-router-dom';
 
 function Hero() {
     return (
@@ -22,9 +23,9 @@ function Hero() {
                     intellectual property, or any other legal matters, we're here to provide expert
                     guidance.
                 </p>
-                <div className='w-full self-start mt-10 bg-transparent cursor-pointer '>
+                <Link to="/contact-us" className='w-full self-start mt-10 bg-transparent cursor-pointer '>
                     <button className='px-10 py-3 rounded-full lg:text-xl text-white border-2 border-stone-200 hover:scale-110 duration-200 hover:bg-slate-900'>Consult Now</button>
-                </div>
+                </Link>
             </div>
 
         </section>
