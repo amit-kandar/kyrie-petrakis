@@ -6,7 +6,7 @@ function Service() {
     const backgroundStyle = {
         backgroundImage: `url(${TESTIMONIALS_BG_IMG})`,
         backgroundRepeat: "no-repeat",
-        backgroundPosition: 'center',
+        backgroundPosition: 'center bottom',
     };
     return (
         <section className='w-full flex justify-center py-12 px-6 bg-gray-700' style={backgroundStyle}>
