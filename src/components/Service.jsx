@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { services } from "../utils/services";
+import { TESTIMONIALS_BG_IMG } from "../config/constant";
 
 function Service() {
   const { serviceName } = useParams();
@@ -10,15 +11,21 @@ function Service() {
     return service.title.toLowerCase() === formattedTitle.toLowerCase();
   });
 
+  const backgroundStyle = {
+    backgroundImage: `url(${TESTIMONIALS_BG_IMG})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: 'center bottom  ',
+  };
+
   return (
     <section className="w-full flex justify-center flex-col">
-      <div className="w-full flex items-center flex-col py-12 lg:py-16 xl:py-24 bg-slate-700">
+      <div className="w-full flex items-center flex-col py-12 lg:py-16 xl:py-24 bg-gray-600">
         <div className="container px-4 md:px-6">
           <div className="w-full flex flex-col gap-6 items-center mb-10 lg:px-40 lg:mb-14">
             <h1 className="text-3xl font-bold tracking-widest sm:text-5xl lg:text-7xl text-gray-100">{selectedService.title}</h1>
             <p className="text-sm text-center opacity-60 text-gray-100">{selectedService.description}</p>
           </div>
-          <div className="grid items-start lg:grid-cols-2 gap-6 lg:gap-6 xl:gap-1">
+          <div className="grid items-start lg:grid-cols-2 gap-6 lg:gap-6 xl:gap-3">
             <img
               alt="service"
               className="w-full h-60 md:h-80 mx-auto aspect-auto overflow-hidden rounded-xl object-cover object-center "
@@ -48,6 +55,10 @@ function Service() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="w-full flex items-center flex-col py-12 lg:py-16 xl:py-24 bg-gray-900" style={backgroundStyle}>
+        <div className="container px-4 md-px6">
           <div className="mx-auto w-full my-10 max-w-3xl flex justify-center">
             <h2 className="text-2xl text-start md:text-3xl text-white font-medium tracking-wider">{selectedService.CTA}</h2>
           </div>
@@ -56,40 +67,40 @@ function Service() {
               <label className="block text-sm font-medium text-gray-100" htmlFor="first-name">
                 First name
               </label>
-              <input id="first-name" placeholder="Enter your first name" className="bg-transparent border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-gray-100 focus:border-zinc-200 duration-200" />
+              <input id="first-name" placeholder="Enter your first name" className="bg-gray-900 border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-gray-100 focus:border-zinc-200 duration-200" />
             </div>
             <div className="grid gap-1.5">
               <label className="block text-sm font-medium text-gray-100" htmlFor="last-name">
                 Last name
               </label>
-              <input id="last-name" placeholder="Enter your last name" className="bg-transparent border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-gray-100 focus:border-zinc-200 duration-200" />
+              <input id="last-name" placeholder="Enter your last name" className="bg-gray-900 border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-gray-100 focus:border-zinc-200 duration-200" />
             </div>
             <div className="grid gap-1.5">
               <label className="block text-sm font-medium text-gray-100" htmlFor="email">
                 Email
               </label>
-              <input id="email" placeholder="Enter your email" type="email" className="bg-transparent border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-gray-100 focus:border-zinc-200 duration-200" />
+              <input id="email" placeholder="Enter your email" type="email" className="bg-gray-900 border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-gray-100 focus:border-zinc-200 duration-200" />
             </div>
             <div className="grid gap-1.5">
               <label className="block text-sm font-medium text-gray-100" htmlFor="email">
                 Select Service
               </label>
-              <input id="service" placeholder="Enter service name" type="text" className="bg-transparent border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-gray-100 focus:border-zinc-200 duration-200" />
+              <input id="service" placeholder="Enter service name" type="text" className="bg-gray-900 border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-gray-100 focus:border-zinc-200 duration-200" />
             </div>
             <div className="grid gap-1.5">
               <label className="block text-sm font-medium text-gray-100" htmlFor="subject">
                 Subject
               </label>
-              <input id="subject" placeholder="Enter your subject" className="bg-transparent border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-gray-100 focus:border-zinc-200 duration-200" />
+              <input id="subject" placeholder="Enter your subject" className="bg-gray-900 border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-gray-100 focus:border-zinc-200 duration-200" />
             </div>
             <div className="grid gap-1.5">
               <label className="block text-sm font-medium text-gray-100" htmlFor="message">
                 Message
               </label>
-              <textarea className="min-h-[150px] resize-y bg-transparent border-2 border-zinc-500 rounded-md outline-none text-gray-100 focus:border-zinc-200 duration-200 pl-5 py-3" id="message" placeholder="Enter your message" />
+              <textarea className="min-h-[150px] resize-y bg-gray-900 border-2 border-zinc-500 rounded-md outline-none text-gray-100 focus:border-zinc-200 duration-200 pl-5 py-3" id="message" placeholder="Enter your message" />
             </div>
             <div className="w-full flex justify-center items-center md:justify-start lg:justify-center">
-              <button className="w-full md:w-36 py-3 text-lg text-white font-medium rounded-md bg-blue-400 duration-200 hover:bg-blue-500" >Submit</button>
+              <button className="w-full md:w-36 py-3 text-lg text-white font-medium rounded-md bg-green-500 duration-200 hover:bg-green-600" >Submit</button>
             </div>
           </div>
         </div>
