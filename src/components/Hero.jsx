@@ -25,13 +25,13 @@ function Hero() {
                 </Carousel>
                 <div className="absolute inset-0 bg-black opacity-50"></div>
             </div>
-            <div className='max-w-7xl h-full z-10 flex flex-col justify-center items-center px-3 sm:px-5 mt-16 md:mt-36'>
-                <div className='w-full text-white text-left' >
+            <div className='max-w-7xl h-full z-10 flex flex-col justify-center items-center px-3 sm:px-5 mt-32 md:mt-36'>
+                <div className='w-full text-white text-left'>
                     <h2 className='text-4xl font-semibold md:text-4xl lg:text-6xl'>
                         {COMPANY_NAME}
                     </h2>
                 </div>
-                <p className='text-left text-lg leading-7 text-zinc-300 mt-4'>
+                <p className='text-left text-lg leading-7 text-zinc-300 mt-5 tracking-wider'>
                     Kyrie Petrakis is a comprehensive legal services platform designed to make
                     legal assistance easily accessible. Whether you need help with contracts,
                     intellectual property, or any other legal matters, we're here to provide expert
