@@ -19,7 +19,7 @@ function Testimonials() {
     }
 
     return (
-        <section className='relative w-full bg-gray-500 min-h-[500px] lg:min-h-[600px]'>
+        <section className='relative w-full bg-gray-500 min-h-[500px] lg:min-h-[600px] xl:min-h-[700px]'>
             <div className='w-full absolute top-36'>
                 <img src={TESTIMONIALS_BG_IMG} alt="testimonials background" className='w-full' />
             </div>
