@@ -11,7 +11,7 @@ function WhyUs() {
                 </div>
                 <div className='w-full flex flex-col gap-5 lg:flex-row'>
                     <div className='w-full h-64 sm:h-72 md:h-80 xl:h-96 mb-5'>
-                        <img src={WHYUS_BG} alt="why us background" className='w-full h-full bg-cover bg-center' />
+                        <img src={WHYUS_BG} alt="why us background" className='w-full h-full rounded-ss-3xl rounded-ee-3xl bg-cover bg-center' />
                     </div>
                     <div className='w-full flex flex-col gap-5 md:flex-row lg:flex-col lg:justify-start lg:gap-6 xl:gap-[72px]'>
                         <div className='w-full flex flex-row gap-5'>
