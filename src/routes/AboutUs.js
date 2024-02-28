@@ -28,11 +28,11 @@ function AboutUs() {
                             </div>
                         </div>
                     </div>
-                    <div className='w-full flex justify-center items-center gap-5 flex-wrap'>
+                    <div className='w-full flex justify-center items-center gap-5 flex-wrap mt-20'>
                         <div className='w-full mb-10 flex justify-center items-center md:justify-center text-white'>
                             <h1 className='text-2xl font-semibold md:text-3xl lg:text-4xl'>How we Work?</h1>
                         </div>
-                        <div className='w-full h-40 flex-1 min-w-[240px] max-w-96 p-5 rounded-md bg-slate-700'>
+                        <div className='w-full h-44 flex-1 min-w-[240px] max-w-96 p-5 rounded-md bg-slate-700'>
                             <div className='mb-3'>
                                 <h4 className='text-xl text-white'>1. Legal Consultation</h4>
                             </div>
@@ -44,7 +44,7 @@ function AboutUs() {
 
                             </p>
                         </div>
-                        <div className='w-full h-40 flex-1 min-w-[240px] max-w-96 p-5 rounded-md bg-slate-700'>
+                        <div className='w-full h-44 flex-1 min-w-[240px] max-w-96 p-5 rounded-md bg-slate-700'>
                             <div className='mb-3'>
                                 <h4 className='text-xl text-white'>2. Document Preparation</h4>
                             </div>
@@ -56,7 +56,7 @@ function AboutUs() {
                                 knowledgeable team.
                             </p>
                         </div>
-                        <div className='w-full h-40 flex-1 min-w-[240px] max-w-96 p-5 rounded-md bg-slate-700'>
+                        <div className='w-full h-44 flex-1 min-w-[240px] max-w-96 p-5 rounded-md bg-slate-700'>
                             <div className='mb-3'>
                                 <h4 className='text-xl text-white'>3. Case Management</h4>
                             </div>
