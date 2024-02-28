@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -7,8 +7,24 @@ import { LOGO1 } from '../config/constant';
 export default function Navbar() {
     const location = useLocation();
 
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            const offset = 100;
+            setIsScrolled(scrollPosition > offset);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <Disclosure as="nav" className="bg-gray-800">
+        <Disclosure as="nav" className={`fixed top-0 z-50 w-full ${isScrolled ? 'bg-gray-800/10 backdrop-blur-3xl' : 'bg-gray-800'}`}>
             {({ open }) => (
                 <>
                     <div className="w-full px-4 sm:px-6 lg:px-8">
