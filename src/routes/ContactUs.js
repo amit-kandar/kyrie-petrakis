@@ -91,7 +91,7 @@ function ContactUs() {
                             </div>
                             <div className='p-3 flex items-center flex-col gap-4'>
                                 <div
-                                    className='w-16 h-16 flex justify-center items-center rounded-full border-2 border-gray-100'
+                                    className='w-16 h-16 flex justify-center items-center rounded-full border-2 border-gray-100 cursor-pointer'
                                     onClick={() => { window.location = 'mailto:info@domain.com' }}
                                 >
                                     <img src={MAIL} alt="location" className='w-6 h-6' />
