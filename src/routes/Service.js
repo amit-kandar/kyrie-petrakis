@@ -14,7 +14,7 @@ function Service() {
         backgroundPosition: 'center bottom',
     };
     return (
-        <section className='w-full flex justify-center py-12 px-6 bg-gray-700' style={backgroundStyle}>
+        <section className='w-full flex justify-center py-12 px-6 bg-gray-700 mt-20' style={backgroundStyle}>
             <div className='container'>
                 <div className='w-full flex flex-col items-center gap-3 lg:gap-6'>
                     <h1 className='text-3xl font-medium tracking-wider text-white md:text-4xl lg:text-6xl'>Services</h1>

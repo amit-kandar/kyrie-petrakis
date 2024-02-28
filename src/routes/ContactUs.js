@@ -39,7 +39,7 @@ function ContactUs() {
     };
 
     return (
-        <section className="w-full flex justify-center py-10 px-5 lg:px-12 xl:px-16 bg-gray-700" style={backgroundStyle}>
+        <section className="w-full flex justify-center py-10 px-5 lg:px-12 xl:px-16 bg-gray-700 mt-20" style={backgroundStyle}>
             <div className='container'>
                 <div className='flex flex-col justify-around gap-5 md:gap-x-8 md:flex-row'>
                     <div className="w-full max-w-[600px] flex-1 mx-auto mt-8 p-6 bg-gray-800 rounded-md shadow-lg">

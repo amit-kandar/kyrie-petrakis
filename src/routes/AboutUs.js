@@ -9,7 +9,7 @@ function AboutUs() {
     if (pathname === '/about-us')
         document.title = "About - Kyrie Petrakis"
     return (
-        <section className='w-full px-5 py-16 bg-gray-800'>
+        <section className='w-full px-5 py-16 bg-gray-800 mt-20'>
             <div className='w-full flex flex-col items-center justify-center gap-10'>
                 <div className="container">
                     <div className='w-full flex flex-col justify-center items-center md:items-start gap-5 lg:gap-12 md:flex-row'>
