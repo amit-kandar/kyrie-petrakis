@@ -18,7 +18,7 @@ function Hero() {
                     {
                         bg_img.map((item, index) => {
                             return (
-                                <img src={item} key={index} alt="hero background" className='w-full min-h-screen bg-cover bg-center object-cover bg-no-repeat' />
+                                <img src={item} key={index} alt="hero background" className='w-full h-screen bg-cover bg-center object-cover bg-no-repeat' />
                             )
                         })
                     }
