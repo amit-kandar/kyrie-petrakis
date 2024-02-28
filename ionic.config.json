@@ -1,0 +1,7 @@
+{
+    "name": "law_firm",
+    "integrations": {
+        "capacitor": {}
+    },
+    "type": "react"
+}
