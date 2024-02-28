@@ -1,8 +1,13 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { INCOME_TAX_ICO, GST_ICO, CRIMINAL_ICO, CIVIL_ICO, OTHHERS_ICO, TESTIMONIALS_BG_IMG } from '../config/constant';
 import Card from '../components/Card';
 
 function Service() {
+    const location = useLocation();
+    const { pathname } = location;
+    if (pathname === '/services')
+        document.title = "Services - Kyrie Petrakis"
     const backgroundStyle = {
         backgroundImage: `url(${TESTIMONIALS_BG_IMG})`,
         backgroundRepeat: "no-repeat",

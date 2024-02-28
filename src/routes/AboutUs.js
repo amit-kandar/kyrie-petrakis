@@ -1,8 +1,13 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { ABOUT_BG } from '../config/constant';
 import { Link } from 'react-router-dom';
 
 function AboutUs() {
+    const location = useLocation();
+    const { pathname } = location;
+    if (pathname === '/about-us')
+        document.title = "About - Kyrie Petrakis"
     return (
         <section className='w-full px-5 py-16 bg-gray-800'>
             <div className='w-full flex flex-col items-center justify-center gap-10'>

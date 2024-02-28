@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import LOCATION from '../assets/marker.svg';
 import USER from '../assets/user.svg';
 import { TESTIMONIALS_BG_IMG } from '../config/constant'
 
 function ContactUs() {
+    const location = useLocation();
+    const { pathname } = location;
+    if (pathname === '/contact-us')
+        document.title = "Contact Us - Kyrie Petrakis"
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
