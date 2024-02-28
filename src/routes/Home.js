@@ -15,14 +15,14 @@ function Home() {
         document.title = "Kyrie Petrakis"
 
     return (
-        <div className='mt-20'>
+        <>
             <Hero />
             <Services />
             <AboutUs />
             <WhyUs />
             <Testimonials />
             <ContactUs />
-        </div>
+        </>
     )
 }
 
