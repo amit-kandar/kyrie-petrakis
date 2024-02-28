@@ -4,7 +4,7 @@ import { LOGO1, COMPANY_NAME } from '../config/constant';
 
 function Footer() {
     return (
-        <footer className='w-full py-10 px-5 bg-slate-800'>
+        <footer className='w-full py-10 px-5 bg-slate-800 hidden md:block'>
             <div className='w-full grid grid-cols-1 md:grid-cols-3 gap-5'>
                 <div className='w-fit'>
                     <div className='w-20 h-20 rounded-full mb-3'>
