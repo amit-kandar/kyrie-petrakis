@@ -36,13 +36,15 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/services" element={<Services />} />
-        <Route path='/services/:serviceName' element={<Service />} />
-      </Routes>
+      <div className='pt-20'>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/services" element={<Services />} />
+          <Route path='/services/:serviceName' element={<Service />} />
+        </Routes>
+      </div>
       <Footer />
       <div
         className={`fixed hidden lg:flex bottom-4 z-50 right-4 w-14 h-14 rounded-md bg-blue-500 text-white items-center justify-center cursor-pointer ${showButton ? 'visible' : 'invisible'}`}
