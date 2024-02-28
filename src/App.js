@@ -45,7 +45,7 @@ function App() {
       </Routes>
       <Footer />
       <div
-        className={`fixed bottom-4 z-50 right-4 w-14 h-14 rounded-md bg-blue-500 text-white flex items-center justify-center cursor-pointer ${showButton ? 'visible' : 'invisible'}`}
+        className={`fixed hidden lg:flex bottom-4 z-50 right-4 w-14 h-14 rounded-md bg-blue-500 text-white items-center justify-center cursor-pointer ${showButton ? 'visible' : 'invisible'}`}
         onClick={scrollToTop}
       >
         <i className='bx bx-up-arrow-alt text-4xl'></i>
