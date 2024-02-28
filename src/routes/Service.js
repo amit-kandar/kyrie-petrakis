@@ -17,7 +17,7 @@ function Service() {
                         Efficient and reliable services tailored to your needs. Expert solutions, seamless communication, and superior results. Choose excellence for success.
                     </p>
                 </div>
-                <div className='w-full md:px-16 lg:px-8 xl:px-44 grid grid-cols-1 place-items-center sm:grid-cols-2 lg:grid-cols-3 gap-6 my-8'>
+                <div className='w-fll md:px-8 grid grid-cols-1 place-items-center sm:grid-cols-2 lg:grid-cols-3 gap-14 my-8'>
                     <Card
                         title="Income Tax"
                         image_src={INCOME_TAX_ICO}
