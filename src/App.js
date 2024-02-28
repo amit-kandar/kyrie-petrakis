@@ -9,7 +9,6 @@ import Home from "./routes/Home";
 import AboutUs from './routes/AboutUs';
 import ContactUs from './routes/ContactUs';
 import Services from './routes/Service';
-import Testimonials from './routes/Testimonials';
 import Footer from "./components/Footer";
 import Service from './components/Service';
 
@@ -43,7 +42,6 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/services" element={<Services />} />
         <Route path='/services/:serviceName' element={<Service />} />
-        <Route path="/testimonials" element={<Testimonials />} />
       </Routes>
       <Footer />
       <div
