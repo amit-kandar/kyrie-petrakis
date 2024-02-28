@@ -83,9 +83,9 @@ function Service() {
             </div>
             <div className="grid gap-1.5">
               <label className="block text-sm font-medium text-gray-100" htmlFor="email">
-                Select Service
+                Service
               </label>
-              <input id="service" placeholder="Enter service name" type="text" className="bg-gray-900 border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-gray-100 focus:border-zinc-200 duration-200" />
+              <input id="service" placeholder="Enter service name" type="text" value={selectedService.title} className="border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-white focus:border-zinc-200 duration-200 cursor-not-allowed bg-gray-400 opacity-80" disabled />
             </div>
             <div className="grid gap-1.5">
               <label className="block text-sm font-medium text-gray-100" htmlFor="subject">
