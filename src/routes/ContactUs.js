@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import LOCATION from '../assets/marker.svg';
-import USER from '../assets/user.svg';
+import MAIL from '../assets/envelope.svg';
+import PHONE from '../assets/phone-call.svg';
 import { TESTIMONIALS_BG_IMG } from '../config/constant'
 
 function ContactUs() {
@@ -83,24 +84,30 @@ function ContactUs() {
                         </div>
                         <div className='w-full flex flex-wrap justify-around gap-2 md:mt-12'>
                             <div className='p-3 flex items-center flex-col gap-4'>
-                                <div className='w-16 h-16 flex justify-center items-center rounded-full border-2 border-gray-100'>
+                                <Link to="https://www.google.com/maps?ll=22.577688,88.401059&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=16265878716533400740" target='_blank' className='w-16 h-16 flex justify-center items-center rounded-full border-2 border-gray-100'>
                                     <img src={LOCATION} alt="location" className='w-6 h-6' />
-                                </div>
+                                </Link>
                                 <p className='text-sm text-center font-medium text-white opacity-70'>Main Office<br />123 Anywhere St.<br />Any City ST 12345</p>
                             </div>
                             <div className='p-3 flex items-center flex-col gap-4'>
-                                <div className='w-16 h-16 flex justify-center items-center rounded-full border-2 border-gray-100'>
-                                    <img src={USER} alt="user" className='w-6 h-6' />
+                                <div
+                                    className='w-16 h-16 flex justify-center items-center rounded-full border-2 border-gray-100'
+                                    onClick={() => { window.location = 'mailto:info@domain.com' }}
+                                >
+                                    <img src={MAIL} alt="location" className='w-6 h-6' />
                                 </div>
-                                <div>
-                                    <div className='flex flex-row items-center gap-3 text-white opacity-70'>
-                                        <i className='bx bx-phone-call'></i>
-                                        <span className='text-sm'>(123) 456-7890</span>
-                                    </div>
-                                    <div className='flex flex-row items-center gap-3 text-white opacity-70'>
-                                        <i className='bx bx-envelope text-lg'></i>
-                                        <span className='text-sm'>info@example.com</span>
-                                    </div>
+                                <div className='flex flex-row items-center gap-3 text-white opacity-70'>
+                                    <i className='bx bx-envelope text-lg'></i>
+                                    <span className='text-sm'>info@example.com</span>
+                                </div>
+                            </div>
+                            <div className='p-3 flex items-center flex-col gap-4'>
+                                <Link to="tel:+916296080621" className='w-16 h-16 flex justify-center items-center rounded-full border-2 border-gray-100'>
+                                    <img src={PHONE} alt="user" className='w-6 h-6' />
+                                </Link>
+                                <div className='flex flex-row items-center gap-3 text-white opacity-70'>
+                                    <i className='bx bx-phone-call'></i>
+                                    <span className='text-sm'>(123) 456-7890</span>
                                 </div>
                             </div>
                         </div>
