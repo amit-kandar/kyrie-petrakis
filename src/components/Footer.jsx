@@ -41,15 +41,18 @@ function Footer() {
                     <div className='w-fit'>
                         <h1 className='text-2xl text-white font-bold tracking-wider mb-3' >Contact Us</h1>
                         <div className='w-full flex flex-col gap-2'>
-                            <span className='w-fit flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75'>
+                            <Link to="tel:+916296080621" className='w-fit flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75'>
                                 <i className='bx bx-phone-call text-xl text-white'></i>
                                 <span>(123) 456-7890</span>
-                            </span>
-                            <span className='w-fit flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75'>
+                            </Link>
+                            <Link to="https://www.google.com/maps?ll=22.577688,88.401059&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=16265878716533400740" target='_blank' className='w-fit flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75'>
                                 <i className='bx bx-map text-xl text-white'></i>
                                 <span>123 Main St, Cityville, 12345, Fictionland.</span>
-                            </span>
-                            <span className='w-fit flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75'>
+                            </Link>
+                            <span
+                                onClick={() => { window.location = 'mailto:info@domain.com' }}
+                                className='w-fit flex flex-row gap-3 justify-start items-center text-base tracking-normal text-neutral-100 opacity-75 cursor-pointer'
+                            >
                                 <i className='bx bx-envelope text-xl text-white'></i>
                                 <span>info@domain.com</span>
                             </span>
