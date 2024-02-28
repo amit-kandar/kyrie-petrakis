@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from "nuka-carousel";
 import { useMediaQuery } from 'react-responsive';
 import { TESTIMONIALS_BG_IMG } from '../config/constant'
-import TestimonialCard from '../components/TestimonialCard';
+import TestimonialCard from './TestimonialCard';
 import { testimonials } from '../utils/testimonials';
 
 function Testimonials() {
