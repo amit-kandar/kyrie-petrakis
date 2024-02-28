@@ -11,7 +11,7 @@ export default function Navbar() {
         <Disclosure as="nav" className="bg-gray-800">
             {({ open }) => (
                 <>
-                    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                    <div className="w-full px-4 sm:px-6 lg:px-8">
                         <div className="relative flex h-20 items-center justify-between">
                             <div className="w-full flex items-center justify-bet
                              sm:items-stretch sm:justify-between ">
