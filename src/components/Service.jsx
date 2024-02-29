@@ -24,6 +24,7 @@ function Service() {
     first_name: "",
     last_name: "",
     email: "",
+    phone: "",
     service: selectedService.title,
     subject: "",
     message: ""
@@ -35,8 +36,7 @@ function Service() {
     handleChange,
     errors,
     handleSubmit,
-    touched,
-    // validateForm
+    touched
   } = useFormik({
     initialValues: initial_values,
     validateOnBlur: true,
@@ -97,12 +97,12 @@ function Service() {
             <div className="max-w-3xl mx-auto grid items-start gap-4 my-8">
               <div className="grid gap-1.5">
                 <label className="block text-sm font-medium text-gray-100" htmlFor="first-name">
-                  First name
+                  First name<sup className='text-red-500 text-sm mt-10'>*</sup>
                 </label>
                 <input
                   id="first_name"
                   placeholder="Enter your first name"
-                  className={`bg-gray-900 border-2 rounded-md py-3 pl-5 outline-none text-gray-100 duration-200 ${errors.first_name && touched.first_name ? "border-red-500 focus:outline-[3.5px] focus:outline-offset-[-3px] focus:outline-red-500" : "border-zink-500 focus:outline-[3.5px] focus:outline-offset-[-3px] focus:outline-white"}`}
+                  className={`bg-gray-900 border-2 rounded-md py-3 pl-5 outline-none text-gray-100 ${errors.first_name && touched.first_name ? "border-red-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-red-500" : "border-zink-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-white"}`}
                   value={values.first_name}
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -111,12 +111,12 @@ function Service() {
               </div>
               <div className="grid gap-1.5">
                 <label className="block text-sm font-medium text-gray-100" htmlFor="last-name">
-                  Last name
+                  Last name<sup className='text-red-500 text-sm mt-10'>*</sup>
                 </label>
                 <input
                   id="last_name"
                   placeholder="Enter your last name"
-                  className={`bg-gray-900 border-2 rounded-md py-3 pl-5 outline-none text-gray-100 duration-200 ${errors.last_name && touched.last_name ? "border-red-500 focus:outline-[3.5px] focus:outline-offset-[-3px] focus:outline-red-500" : "border-zink-500 focus:outline-[3.5px] focus:outline-offset-[-3px] focus:outline-white"}`}
+                  className={`bg-gray-900 border-2 rounded-md py-3 pl-5 outline-none text-gray-100 ${errors.last_name && touched.last_name ? "border-red-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-red-500" : "border-zink-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-white"}`}
                   value={values.last_name}
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -131,7 +131,7 @@ function Service() {
                   id="email"
                   placeholder="Enter your email"
                   type="email"
-                  className={`bg-gray-900 border-2 rounded-md py-3 pl-5 outline-none text-gray-100 duration-200 ${errors.email && touched.email ? "border-red-500 focus:outline-[3.5px] focus:outline-offset-[-3px] focus:outline-red-500" : "border-zink-500 focus:outline-[3.5px] focus:outline-offset-[-3px] focus:outline-white"}`}
+                  className={`bg-gray-900 border-2 rounded-md py-3 pl-5 outline-none text-gray-100 ${errors.email && touched.email ? "border-red-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-red-500" : "border-zink-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-white"}`}
                   value={values.email}
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -139,14 +139,36 @@ function Service() {
                 {errors.email && touched.email ? <Error msg={errors.email} /> : null}
               </div>
               <div className="grid gap-1.5">
-                <label className="block text-sm font-medium text-gray-100" htmlFor="email">
-                  Service
+                <label className="block text-sm font-medium text-gray-100" htmlFor="phone">
+                  Phone Number<sup className='text-red-500 text-sm mt-10'>*</sup>
                 </label>
-                <input id="service" placeholder="Enter service name" type="text" value={selectedService.title} className="border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-white focus:border-zinc-200 duration-200 cursor-not-allowed bg-gray-100/20 backdrop-blur- opacity-80 " disabled />
+                <input
+                  id="phone"
+                  placeholder="Enter your phone"
+                  type="tel"
+                  className={`bg-gray-900 border-2 rounded-md py-3 pl-5 outline-none text-gray-100 ${errors.phone && touched.phone ? "border-red-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-red-500" : "border-zink-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-white"}`}
+                  value={values.phone}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                {errors.phone && touched.phone ? <Error msg={errors.phone} /> : null}
+              </div>
+              <div className="grid gap-1.5">
+                <label className="block text-sm font-medium text-gray-100" htmlFor="email">
+                  Service<sup className='text-red-500 text-sm mt-10'>*</sup>
+                </label>
+                <input
+                  id="service"
+                  placeholder="Enter service name"
+                  type="text"
+                  value={selectedService.title}
+                  className={`bg-gray-900 border-2 rounded-md py-3 pl-5 outline-none text-gray-100 ${errors.service && touched.service ? "border-red-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-red-500" : "border-zink-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-white"}`}
+                  disabled
+                />
               </div>
               <div className="grid gap-1.5">
                 <label className="block text-sm font-medium text-gray-100" htmlFor="subject">
-                  Subject
+                  Subject<sup className='text-red-500 text-sm mt-10'>*</sup>
                 </label>
                 <input
                   id="subject"
@@ -160,11 +182,11 @@ function Service() {
               </div>
               <div className="grid gap-1.5">
                 <label className="block text-sm font-medium text-gray-100" htmlFor="message">
-                  Message
+                  Message<sup className='text-red-500 text-sm mt-10'>*</sup>
                 </label>
                 <textarea
                   id="message"
-                  className={`min-h-[150px] resize-y bg-gray-900 border-2 rounded-md outline-none text-gray-100 duration-200 pl-5 py-3 ${errors.message && touched.message ? "border-red-500 focus:outline-[3.5px] focus:outline-offset-[-3px] focus:outline-red-500" : "border-zinc-500 focus:outline-[3.5px] focus:outline-offset-[-3px] focus:outline-white"}`}
+                  className={`min-h-[150px] resize-y bg-gray-900 border-2 rounded-md outline-none text-gray-100 duration-200 pl-5 py-3 ${errors.message && touched.message ? "border-red-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-red-500" : "border-zink-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-white"}`}
                   placeholder="Enter your message"
                   value={values.message}
                   onChange={handleChange}
