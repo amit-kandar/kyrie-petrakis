@@ -2,6 +2,15 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { services } from "../utils/services";
 import { TESTIMONIALS_BG_IMG } from "../config/constant";
+import { useFormik } from "formik";
+import contactSchema from '../schema/contactSchema';
+import Error from '../components/Error';
+
+const backgroundStyle = {
+  backgroundImage: `url(${TESTIMONIALS_BG_IMG})`,
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: 'center bottom',
+};
 
 function Service() {
   const { serviceName } = useParams();
@@ -11,11 +20,33 @@ function Service() {
     return service.title.toLowerCase() === formattedTitle.toLowerCase();
   });
 
-  const backgroundStyle = {
-    backgroundImage: `url(${TESTIMONIALS_BG_IMG})`,
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: 'center bottom  ',
-  };
+  const initial_values = {
+    first_name: "",
+    last_name: "",
+    email: "",
+    service: selectedService.title,
+    subject: "",
+    message: ""
+  }
+
+  const {
+    values,
+    handleBlur,
+    handleChange,
+    errors,
+    handleSubmit,
+    touched,
+    // validateForm
+  } = useFormik({
+    initialValues: initial_values,
+    validateOnBlur: true,
+    validationSchema: contactSchema,
+    validateOnChange: true,
+    onSubmit: async (values, { resetForm }) => {
+      console.log(values);
+      resetForm();
+    }
+  })
 
   return (
     <section className="w-full flex justify-center flex-col">
@@ -62,47 +93,90 @@ function Service() {
           <div className="mx-auto w-full my-10 max-w-3xl flex justify-center">
             <h2 className="text-2xl text-start md:text-3xl text-white font-medium tracking-wider">{selectedService.CTA}</h2>
           </div>
-          <div className="max-w-3xl mx-auto grid items-start gap-4 my-8">
-            <div className="grid gap-1.5">
-              <label className="block text-sm font-medium text-gray-100" htmlFor="first-name">
-                First name
-              </label>
-              <input id="first-name" placeholder="Enter your first name" className="bg-gray-900 border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-gray-100 focus:border-zinc-200 duration-200" />
+          <form onSubmit={handleSubmit}>
+            <div className="max-w-3xl mx-auto grid items-start gap-4 my-8">
+              <div className="grid gap-1.5">
+                <label className="block text-sm font-medium text-gray-100" htmlFor="first-name">
+                  First name
+                </label>
+                <input
+                  id="first_name"
+                  placeholder="Enter your first name"
+                  className={`bg-gray-900 border-2 rounded-md py-3 pl-5 outline-none text-gray-100 duration-200 ${errors.first_name && touched.first_name ? "border-red-500 focus:outline-[3.5px] focus:outline-offset-[-3px] focus:outline-red-500" : "border-zink-500 focus:outline-[3.5px] focus:outline-offset-[-3px] focus:outline-white"}`}
+                  value={values.first_name}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                {errors.first_name && touched.first_name ? <Error msg={errors.first_name} /> : null}
+              </div>
+              <div className="grid gap-1.5">
+                <label className="block text-sm font-medium text-gray-100" htmlFor="last-name">
+                  Last name
+                </label>
+                <input
+                  id="last_name"
+                  placeholder="Enter your last name"
+                  className={`bg-gray-900 border-2 rounded-md py-3 pl-5 outline-none text-gray-100 duration-200 ${errors.last_name && touched.last_name ? "border-red-500 focus:outline-[3.5px] focus:outline-offset-[-3px] focus:outline-red-500" : "border-zink-500 focus:outline-[3.5px] focus:outline-offset-[-3px] focus:outline-white"}`}
+                  value={values.last_name}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                {errors.last_name && touched.last_name ? <Error msg={errors.last_name} /> : null}
+              </div>
+              <div className="grid gap-1.5">
+                <label className="block text-sm font-medium text-gray-100" htmlFor="email">
+                  Email
+                </label>
+                <input
+                  id="email"
+                  placeholder="Enter your email"
+                  type="email"
+                  className={`bg-gray-900 border-2 rounded-md py-3 pl-5 outline-none text-gray-100 duration-200 ${errors.email && touched.email ? "border-red-500 focus:outline-[3.5px] focus:outline-offset-[-3px] focus:outline-red-500" : "border-zink-500 focus:outline-[3.5px] focus:outline-offset-[-3px] focus:outline-white"}`}
+                  value={values.email}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                {errors.email && touched.email ? <Error msg={errors.email} /> : null}
+              </div>
+              <div className="grid gap-1.5">
+                <label className="block text-sm font-medium text-gray-100" htmlFor="email">
+                  Service
+                </label>
+                <input id="service" placeholder="Enter service name" type="text" value={selectedService.title} className="border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-white focus:border-zinc-200 duration-200 cursor-not-allowed bg-gray-100/20 backdrop-blur- opacity-80 " disabled />
+              </div>
+              <div className="grid gap-1.5">
+                <label className="block text-sm font-medium text-gray-100" htmlFor="subject">
+                  Subject
+                </label>
+                <input
+                  id="subject"
+                  placeholder="Enter your subject"
+                  className={`bg-gray-900 border-2 rounded-md py-3 pl-5 outline-none text-gray-100 duration-200 ${errors.subject && touched.subject ? "border-red-500 focus:outline-[3.5px] focus:outline-offset-[-3px] focus:outline-red-500" : "border-zink-500 focus:outline-[3.5px] focus:outline-offset-[-3px] focus:outline-white"}`}
+                  value={values.subject}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                {errors.subject && touched.subject ? <Error msg={errors.subject} /> : null}
+              </div>
+              <div className="grid gap-1.5">
+                <label className="block text-sm font-medium text-gray-100" htmlFor="message">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  className={`min-h-[150px] resize-y bg-gray-900 border-2 rounded-md outline-none text-gray-100 duration-200 pl-5 py-3 ${errors.message && touched.message ? "border-red-500 focus:outline-[3.5px] focus:outline-offset-[-3px] focus:outline-red-500" : "border-zinc-500 focus:outline-[3.5px] focus:outline-offset-[-3px] focus:outline-white"}`}
+                  placeholder="Enter your message"
+                  value={values.message}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                {errors.message && touched.message ? <Error msg={errors.message} /> : null}
+              </div>
+              <div className="w-full flex justify-center items-center md:justify-start lg:justify-center">
+                <button type="submit" className="w-full md:w-36 py-3 text-lg text-white font-medium rounded-md bg-green-500 duration-200 hover:bg-green-600" >Submit</button>
+              </div>
             </div>
-            <div className="grid gap-1.5">
-              <label className="block text-sm font-medium text-gray-100" htmlFor="last-name">
-                Last name
-              </label>
-              <input id="last-name" placeholder="Enter your last name" className="bg-gray-900 border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-gray-100 focus:border-zinc-200 duration-200" />
-            </div>
-            <div className="grid gap-1.5">
-              <label className="block text-sm font-medium text-gray-100" htmlFor="email">
-                Email
-              </label>
-              <input id="email" placeholder="Enter your email" type="email" className="bg-gray-900 border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-gray-100 focus:border-zinc-200 duration-200" />
-            </div>
-            <div className="grid gap-1.5">
-              <label className="block text-sm font-medium text-gray-100" htmlFor="email">
-                Service
-              </label>
-              <input id="service" placeholder="Enter service name" type="text" value={selectedService.title} className="border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-white focus:border-zinc-200 duration-200 cursor-not-allowed bg-gray-100/20 backdrop-blur- opacity-80 " disabled />
-            </div>
-            <div className="grid gap-1.5">
-              <label className="block text-sm font-medium text-gray-100" htmlFor="subject">
-                Subject
-              </label>
-              <input id="subject" placeholder="Enter your subject" className="bg-gray-900 border-2 border-zinc-500 rounded-md py-3 pl-5 outline-none text-gray-100 focus:border-zinc-200 duration-200" />
-            </div>
-            <div className="grid gap-1.5">
-              <label className="block text-sm font-medium text-gray-100" htmlFor="message">
-                Message
-              </label>
-              <textarea className="min-h-[150px] resize-y bg-gray-900 border-2 border-zinc-500 rounded-md outline-none text-gray-100 focus:border-zinc-200 duration-200 pl-5 py-3" id="message" placeholder="Enter your message" />
-            </div>
-            <div className="w-full flex justify-center items-center md:justify-start lg:justify-center">
-              <button className="w-full md:w-36 py-3 text-lg text-white font-medium rounded-md bg-green-500 duration-200 hover:bg-green-600" >Submit</button>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </section>
