@@ -7,6 +7,7 @@ import { TESTIMONIALS_BG_IMG } from '../config/constant';
 import { useFormik } from 'formik';
 import contactSchema from '../schema/contactSchema';
 import Error from '../components/Error';
+import axios from 'axios';
 
 const backgroundStyle = {
     backgroundImage: `url(${TESTIMONIALS_BG_IMG})`,
@@ -23,7 +24,7 @@ function ContactUs() {
     const initial_values = {
         name: '',
         email: '',
-        phone: '',
+        phone_number: '',
         subject: '',
         message: '',
     };
@@ -41,8 +42,14 @@ function ContactUs() {
         validationSchema: contactSchema,
         validateOnChange: true,
         onSubmit: async (values, { resetForm }) => {
-            console.log(values);
-            resetForm();
+            const host = "http://localhost:8080/api/v1/contacts/"
+            try {
+                const response = await axios.post(host, values);
+                console.log(response);
+                resetForm();
+            } catch (error) {
+                console.log(error);
+            }
         }
     })
     return (
@@ -86,19 +93,19 @@ function ContactUs() {
                                     {errors.email && touched.email ? <Error msg={errors.email} /> : null}
                                 </div>
                                 <div className="grid gap-1.5 w-full">
-                                    <label className="block text-sm font-medium text-gray-100" htmlFor="phone">
+                                    <label className="block text-sm font-medium text-gray-100" htmlFor="phone_number">
                                         Phone Number<sup className='text-red-500 text-sm mt-10'>*</sup>
                                     </label>
                                     <input
-                                        id="phone"
+                                        id="phone_number"
                                         placeholder="Enter your phone"
                                         type="tel"
-                                        className={`bg-gray-800 border-2 rounded-md py-3 pl-5 outline-none text-gray-100 ${errors.phone && touched.phone ? "border-red-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-red-500" : "border-zink-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-white"}`}
-                                        value={values.phone}
+                                        className={`bg-gray-800 border-2 rounded-md py-3 pl-5 outline-none text-gray-100 ${errors.phone_number && touched.phone_number ? "border-red-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-red-500" : "border-zink-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-white"}`}
+                                        value={values.phone_number}
                                         onChange={handleChange}
                                         onBlur={handleBlur}
                                     />
-                                    {errors.phone && touched.phone ? <Error msg={errors.phone} /> : null}
+                                    {errors.phone_number && touched.phone_number ? <Error msg={errors.phone_number} /> : null}
                                 </div>
                                 <div className="grid gap-1.5 w-full">
                                     <label className="block text-sm font-medium text-gray-100" htmlFor="subject">
@@ -129,7 +136,7 @@ function ContactUs() {
                                     {errors.message && touched.message ? <Error msg={errors.message} /> : null}
                                 </div>
                                 <div className="w-full flex justify-center items-center md:justify-start lg:justify-center">
-                                    <button className="w-full md:w-36 py-3 text-lg text-white font-medium rounded-md bg-blue-400 duration-200 hover:bg-blue-500" >Submit</button>
+                                    <button type='submit' className="w-full md:w-36 py-3 text-lg text-white font-medium rounded-md bg-blue-400 duration-200 hover:bg-blue-500" >Submit</button>
                                 </div>
                             </div>
                         </form>
