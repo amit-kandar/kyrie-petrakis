@@ -5,6 +5,7 @@ import { TESTIMONIALS_BG_IMG } from "../config/constant";
 import { useFormik } from "formik";
 import serviceSchema from '../schema/serviceSchema';
 import Error from '../components/Error';
+import axios from "axios";
 
 const backgroundStyle = {
   backgroundImage: `url(${TESTIMONIALS_BG_IMG})`,
@@ -24,7 +25,7 @@ function Service() {
     first_name: "",
     last_name: "",
     email: "",
-    phone: "",
+    phone_number: "",
     service: selectedService.title,
     subject: "",
     message: ""
@@ -43,8 +44,15 @@ function Service() {
     validationSchema: serviceSchema,
     validateOnChange: true,
     onSubmit: async (values, { resetForm }) => {
-      console.log(values);
-      resetForm();
+      const host = "http://localhost:8080/api/v1/services/"
+      try {
+        console.log(values);
+        const response = await axios.post(host, values);
+        console.log(response);
+        resetForm();
+      } catch (error) {
+        console.log(error);
+      }
     }
   })
 
@@ -139,19 +147,19 @@ function Service() {
                 {errors.email && touched.email ? <Error msg={errors.email} /> : null}
               </div>
               <div className="grid gap-1.5">
-                <label className="block text-sm font-medium text-gray-100" htmlFor="phone">
+                <label className="block text-sm font-medium text-gray-100" htmlFor="phone_number">
                   Phone Number<sup className='text-red-500 text-sm mt-10'>*</sup>
                 </label>
                 <input
-                  id="phone"
+                  id="phone_number"
                   placeholder="Enter your phone"
                   type="tel"
-                  className={`bg-gray-900 border-2 rounded-md py-3 pl-5 outline-none text-gray-100 ${errors.phone && touched.phone ? "border-red-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-red-500" : "border-zink-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-white"}`}
-                  value={values.phone}
+                  className={`bg-gray-900 border-2 rounded-md py-3 pl-5 outline-none text-gray-100 ${errors.phone_number && touched.phone_number ? "border-red-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-red-500" : "border-zink-500 focus:outline-[3px] focus:-outline-offset-[3px] focus:outline-white"}`}
+                  value={values.phone_number}
                   onChange={handleChange}
                   onBlur={handleBlur}
                 />
-                {errors.phone && touched.phone ? <Error msg={errors.phone} /> : null}
+                {errors.phone_number && touched.phone_number ? <Error msg={errors.phone_number} /> : null}
               </div>
               <div className="grid gap-1.5">
                 <label className="block text-sm font-medium text-gray-100" htmlFor="email">
