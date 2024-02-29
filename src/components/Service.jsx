@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { services } from "../utils/services";
 import { TESTIMONIALS_BG_IMG } from "../config/constant";
 import { useFormik } from "formik";
-import contactSchema from '../schema/contactSchema';
+import serviceSchema from '../schema/serviceSchema';
 import Error from '../components/Error';
 
 const backgroundStyle = {
@@ -40,7 +40,7 @@ function Service() {
   } = useFormik({
     initialValues: initial_values,
     validateOnBlur: true,
-    validationSchema: contactSchema,
+    validationSchema: serviceSchema,
     validateOnChange: true,
     onSubmit: async (values, { resetForm }) => {
       console.log(values);

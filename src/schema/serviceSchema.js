@@ -1,6 +1,6 @@
 import * as yup from 'yup';
 
-const contactSchema = yup.object().shape({
+const serviceSchema = yup.object().shape({
     first_name: yup.string().required('First name is required'),
     last_name: yup.string().required('Last name is required'),
     email: yup.string().email('Invalid email').required('Email is required'),
@@ -9,4 +9,4 @@ const contactSchema = yup.object().shape({
     message: yup.string().required('Message is required'),
 });
 
-export default contactSchema;
+export default serviceSchema;
