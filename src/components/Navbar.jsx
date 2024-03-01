@@ -125,32 +125,29 @@ export default function Navbar() {
 
                     <Disclosure.Panel className="sm:hidden">
                         <div className="space-y-1 px-2 pb-3 pt-2">
-                            <Disclosure.Button
-                                as="a"
-                                href="/"
+                            <Link
+                                to="/"
                                 className={`flex items-center rounded-md px-3 py-2 text-sm font-medium ${location.pathname === '/' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}`}
                             >
                                 Home
-                            </Disclosure.Button>
-                            <Disclosure.Button
-                                as="a"
-                                href="/about-us"
+                            </Link>
+                            <Link
+                                to="/about-us"
                                 className={`flex items-center rounded-md px-3 py-2 text-sm font-medium ${location.pathname === '/about-us' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}`}
                             >
                                 About Us
-                            </Disclosure.Button>
-                            <Disclosure.Button
-                                as="a"
-                                href="/services"
+                            </Link>
+                            <Link
+                                to="/services"
                                 className={`flex items-center rounded-md px-3 py-2 text-sm font-medium ${location.pathname === '/services' ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'}`}
                             >
                                 Services
-                            </Disclosure.Button>
-                            <Disclosure.Button style={{ marginTop: "10px" }}>
-                                <div className='bg-green-900 rounded-full w-fit py-3 cursor-pointer duration-200 hover:scale-110 px-5'>
-                                    <Link to="/contact-us" className='text-white' >Get started</Link>
+                            </Link>
+                            <Link to="/contact-us" >
+                                <div className='bg-green-900 rounded-full w-fit py-3 cursor-pointer duration-200 hover:scale-110 px-5 mt-3 text-white'>
+                                    Get started
                                 </div>
-                            </Disclosure.Button>
+                            </Link>
                         </div>
                     </Disclosure.Panel>
                 </>
