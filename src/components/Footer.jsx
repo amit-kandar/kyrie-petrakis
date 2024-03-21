@@ -61,7 +61,7 @@ function Footer() {
                 </div>
                 <hr className='w-full h-[1px] bg-white my-5 lg:my-16' />
                 <div className='flex flex-col gap-2 lg:flex-row lg:justify-between'>
-                    <span className='text-white text-lg'>&#169;copyright 2023 @{COMPANY_NAME} all right reserved</span>
+                    <span className='text-white text-lg'>Designed & Developed By <Link to="https://metawebtx.com/">@Metawebtx.</Link> &#169;copyright 2023</span>
                     <div className='flex flex-row gap-5 text-white' >
                         <Link to="/" className='cursor-pointer'>Privacy Policy</Link>
                         <Link to="/" className='cursor-pointer'>Terms of use</Link>
